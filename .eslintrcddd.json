@@ -1,0 +1,54 @@
+{
+    "env": {
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "eslint-config-standard-with-typescript",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "tsconfig.json",
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+      "@typescript-eslint/no-floating-promises": "error",
+      "@typescript-eslint/member-delimiter-style": "off",
+      "@typescript-eslint/strict-boolean-expressions": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/restrict-template-expressions": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/prefer-optional-chain": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/return-await": ["error", "in-try-catch"],
+      "@typescript-eslint/promise-function-async": "off",
+      "@typescript-eslint/naming-convention": [
+        "error",
+        {
+          "selector": "default",
+          "format": ["camelCase", "PascalCase", "UPPER_CASE"]
+        }
+      ],      
+      "import/order": [
+        "error",
+        {
+          "newlines-between": "always",
+          "alphabetize": { "order": "asc" }
+        }
+      ],
+      "prefer-destructuring": [
+        "error",
+        {
+          "array": false,
+          "object": true
+        },
+        {
+          "enforceForRenamedProperties": false
+        }
+      ],
+      "return-await": "off"
+    }
+}
