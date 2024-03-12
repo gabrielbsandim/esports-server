@@ -1,0 +1,36 @@
+name: Validate PR
+
+on:
+  pull_request:
+    branches: [main, dev]
+
+env:
+  BRANCH: ${{ github.ref }}
+
+jobs:
+  validate_pr:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./
+
+    steps:
+      - name: Clone main repo
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Build main repo
+        run: tsc
+
+      - name: Test application
+        run: yarn test
