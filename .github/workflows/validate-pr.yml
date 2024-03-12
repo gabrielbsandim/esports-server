@@ -6,6 +6,9 @@ on:
 
 env:
   BRANCH: ${{ github.ref }}
+  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+  PORT: ${{ secrets.PORT }}
+  ENV_NAME: ${{ secrets.ENV_NAME }}
 
 jobs:
   validate_pr:
