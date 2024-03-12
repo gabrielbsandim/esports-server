@@ -16,18 +16,6 @@ export class AdCreateUsecase implements IAdCreateUsecase {
       hourEnd: convertHourStringToMinutes(input.hourEnd),
     })
 
-    console.log(
-      JSON.stringify(
-        {
-          ...props,
-          hourStart: convertMinutesToHourString(hourStart),
-          hourEnd: convertMinutesToHourString(hourEnd),
-        },
-        null,
-        2,
-      ),
-    )
-
     return {
       ...props,
       hourStart: convertMinutesToHourString(hourStart),
