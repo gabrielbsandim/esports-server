@@ -3,9 +3,9 @@ import { type Router } from 'express'
 import { requestValidation } from '@/gateway/middlewares/RequestValidation/RequestValidation'
 import { adCreateSchema } from '@/gateway/middlewares/RequestValidation/schemas/Ad/AdCreate'
 import { container } from '@/infra/di'
-import { AdCreateUsecase } from '@/usecases/Ad/AdCreate'
-import { AdListByGameUsecase } from '@/usecases/Ad/AdListByGame'
-import { DiscordFindByAdUsecase } from '@/usecases/Ad/DiscordFindByAd'
+import { AdCreateUsecase } from '@/usecases/Ad/AdCreateCase'
+import { AdListByGameUsecase } from '@/usecases/Ad/AdListByGameCase'
+import { DiscordFindByAdUsecase } from '@/usecases/Ad/DiscordFindByAdCase'
 
 export const AdController = (router: Router) => {
   const adCreateUsecase = container.resolve(AdCreateUsecase)

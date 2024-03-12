@@ -8,16 +8,16 @@ import { TYPES } from '@/infra/di/types'
 
 @injectable()
 export class DiscordFindByAdRepository implements IDiscordFindByAdRepository {
-  protected readonly dbInstance
+  readonly dbInstance
 
-  constructor(@inject(TYPES.Database) protected readonly db: Database) {
-    this.dbInstance = db.getInstance().ad
+  constructor(@inject(TYPES.Database) readonly db: Database) {
+    this.dbInstance = db.getInstance()
   }
 
   handle = async ({
     id,
   }: DiscordFindByAdRepositoryNamespace.TRequest): Promise<DiscordFindByAdRepositoryNamespace.TResponse> => {
-    const ads = await this.dbInstance.findUniqueOrThrow({
+    const ads = await this.dbInstance.ad.findUniqueOrThrow({
       select: {
         discord: true,
       },

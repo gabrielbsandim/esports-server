@@ -5,11 +5,11 @@ import { HttpServer } from '@/infra/httpServer/HttpServer'
 import { AdCreateRepository } from '@/infra/repositories/Ad/AdCreate'
 import { AdListByGameRepository } from '@/infra/repositories/Ad/AdListByGame'
 import { DiscordFindByAdRepository } from '@/infra/repositories/Ad/DiscordFindByAd'
-import { GameListRepository } from '@/infra/repositories/Games/GameList'
-import { AdCreateUsecase } from '@/usecases/Ad/AdCreate'
-import { AdListByGameUsecase } from '@/usecases/Ad/AdListByGame'
-import { DiscordFindByAdUsecase } from '@/usecases/Ad/DiscordFindByAd'
-import { GameListUsecase } from '@/usecases/Game/ListGame'
+import { GameListRepository } from '@/infra/repositories/Game/GameList'
+import { AdCreateUsecase } from '@/usecases/Ad/AdCreateCase'
+import { AdListByGameUsecase } from '@/usecases/Ad/AdListByGameCase'
+import { DiscordFindByAdUsecase } from '@/usecases/Ad/DiscordFindByAdCase'
+import { GameListUsecase } from '@/usecases/Game/GameListCase'
 
 export const register = () => {
   container.register(TYPES.Database, Database, {

@@ -9,14 +9,14 @@ import { TYPES } from '@/infra/di/types'
 
 @injectable()
 export class GameListRepository implements IGameListRepository {
-  protected readonly dbInstance
+  readonly dbInstance
 
-  constructor(@inject(TYPES.Database) protected readonly db: Database) {
-    this.dbInstance = db.getInstance().game
+  constructor(@inject(TYPES.Database) readonly db: Database) {
+    this.dbInstance = db.getInstance()
   }
 
   handle = async (): Promise<GameListRepositoryNamespace.TResponse> => {
-    const ads = await this.dbInstance.findMany({
+    const ads = await this.dbInstance.game.findMany({
       include: {
         _count: {
           select: {

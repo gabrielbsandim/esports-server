@@ -2,7 +2,7 @@
 import { type Router } from 'express'
 
 import { container } from '@/infra/di'
-import { GameListUsecase } from '@/usecases/Game/ListGame'
+import { GameListUsecase } from '@/usecases/Game/GameListCase'
 
 export const GameController = (router: Router) => {
   const gameListUsecase = container.resolve(GameListUsecase)
