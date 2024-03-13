@@ -39,5 +39,8 @@ jobs:
       - name: "Set up environment"
         run: docker compose -f docker-compose-test.yml up -d --wait
 
+      - name: Wait docker run
+        run: sleep 30
+
       - name: "Test server"
         run: docker exec app_database_test yarn test 
