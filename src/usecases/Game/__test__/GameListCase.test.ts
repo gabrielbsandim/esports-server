@@ -2,7 +2,7 @@
 import { mock } from 'jest-mock-extended'
 
 import { gameListCaseMock } from '@/__fixtures__/Game/GameListMock'
-import { type IGameListRepository } from '@/domain/repositories/Game/GameList'
+import { type IGameListRepository } from '@/domain/repositories/Game/GameListRepository.types'
 import { GameListUsecase } from '@/usecases/Game/GameListCase'
 
 const repositoryMock = mock<IGameListRepository>()

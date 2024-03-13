@@ -1,5 +1,5 @@
-import { type DiscordFindByAdRepositoryNamespace } from '@/domain/repositories/Ad/DiscordFindByAd'
-import { type DiscordFindByAdUsecaseNamespace } from '@/domain/usecases/Ad/DiscordFindByAd'
+import { type DiscordFindByAdRepositoryNamespace } from '@/domain/repositories/Ad/DiscordFindByAdRepository.types'
+import { type DiscordFindByAdUsecaseNamespace } from '@/domain/usecases/Ad/DiscordFindByAdCase.types'
 
 export const discordFindByAdCaseInput: DiscordFindByAdUsecaseNamespace.TRequest = {
   id: 'any id',

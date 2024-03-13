@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  database_test:
+    image: postgres:15
+    container_name: app_database_test
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - ${DB_PORT}:5432

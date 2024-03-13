@@ -1,7 +1,7 @@
 import {
   type DiscordFindByAdRepositoryNamespace,
   type IDiscordFindByAdRepository,
-} from '@/domain/repositories/Ad/DiscordFindByAd'
+} from '@/domain/repositories/Ad/DiscordFindByAdRepository.types'
 import { type Database } from '@/infra/database/db'
 import { inject, injectable } from '@/infra/di'
 import { TYPES } from '@/infra/di/types'

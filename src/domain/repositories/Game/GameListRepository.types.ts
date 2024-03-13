@@ -1,5 +1,5 @@
-import { type IBaseHandler } from '@/domain/application/BaseHandler'
-import { type TGameListResponse } from '@/domain/entities/Game'
+import { type IBaseHandler } from '@/domain/application/BaseHandler.types'
+import { type TGameListResponse } from '@/domain/entities/GameEntity.types'
 import { type IDbRepository } from '@/domain/repositories/Repository.types'
 
 export interface IGameListRepository

@@ -1,15 +1,17 @@
-import { type GameListUsecaseNamespace, type IGameListUsecase } from '@/domain/usecases/Game/GameList'
+import {
+  type GameListUsecaseNamespace,
+  type IGameListUsecase,
+} from '@/domain/usecases/Game/GameListCase.types'
 import { inject, injectable } from '@/infra/di'
 import { TYPES } from '@/infra/di/types'
-import { type GameListRepository } from '@/infra/repositories/Game/GameList'
+import { type GameListRepository } from '@/infra/repositories/Game/GameListRepository'
 
 @injectable()
 export class GameListUsecase implements IGameListUsecase {
   constructor(
     @inject(TYPES.GameListRepository)
-    protected readonly discordFindByAdRepository: GameListRepository,
+    protected readonly gameListRepository: GameListRepository,
   ) {}
 
-  public handle = async (): Promise<GameListUsecaseNamespace.TResponse> =>
-    this.discordFindByAdRepository.handle()
+  public handle = async (): Promise<GameListUsecaseNamespace.TResponse> => this.gameListRepository.handle()
 }

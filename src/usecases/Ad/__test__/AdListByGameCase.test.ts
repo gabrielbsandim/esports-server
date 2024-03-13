@@ -2,7 +2,7 @@
 import { mock } from 'jest-mock-extended'
 
 import { adListByGameInputMock, adListByGameOutputMock } from '@/__fixtures__/Ad/AdListByGameMock'
-import { type IAdListByGameRepository } from '@/domain/repositories/Ad/AdListByGame'
+import { type IAdListByGameRepository } from '@/domain/repositories/Ad/AdListByGameRepository.types'
 import { AdListByGameUsecase } from '@/usecases/Ad/AdListByGameCase'
 import { convertMinutesToHourString } from '@/utils/ConvertHoursAndMinutes'
 

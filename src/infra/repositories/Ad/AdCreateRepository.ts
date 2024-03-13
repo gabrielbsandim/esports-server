@@ -1,4 +1,7 @@
-import { type AdCreateRepositoryNamespace, type IAdCreateRepository } from '@/domain/repositories/Ad/AdCreate'
+import {
+  type AdCreateRepositoryNamespace,
+  type IAdCreateRepository,
+} from '@/domain/repositories/Ad/AdCreateRepository.types'
 import { type Database } from '@/infra/database/db'
 import { inject, injectable } from '@/infra/di'
 import { TYPES } from '@/infra/di/types'

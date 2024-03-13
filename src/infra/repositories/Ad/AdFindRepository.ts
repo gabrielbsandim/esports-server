@@ -1,13 +1,13 @@
 import {
-  type AdListByGameRepositoryNamespace,
-  type IAdListByGameRepository,
-} from '@/domain/repositories/Ad/AdListByGame'
+  type AdFindRepositoryNamespace,
+  type IAdFindRepository,
+} from '@/domain/repositories/Ad/AdFindRepository.types'
 import { type Database } from '@/infra/database/db'
 import { inject, injectable } from '@/infra/di'
 import { TYPES } from '@/infra/di/types'
 
 @injectable()
-export class AdListByGameRepository implements IAdListByGameRepository {
+export class AdFindRepository implements IAdFindRepository {
   readonly dbInstance
 
   constructor(@inject(TYPES.Database) readonly db: Database) {
@@ -15,9 +15,9 @@ export class AdListByGameRepository implements IAdListByGameRepository {
   }
 
   handle = async ({
-    gameId,
-  }: AdListByGameRepositoryNamespace.TRequest): Promise<AdListByGameRepositoryNamespace.TResponse> => {
-    const ads = await this.dbInstance.ad.findMany({
+    id,
+  }: AdFindRepositoryNamespace.TRequest): Promise<AdFindRepositoryNamespace.TResponse> => {
+    const ad = await this.dbInstance.ad.findUniqueOrThrow({
       select: {
         id: true,
         name: true,
@@ -26,15 +26,14 @@ export class AdListByGameRepository implements IAdListByGameRepository {
         yearsPlaying: true,
         hourStart: true,
         hourEnd: true,
+        gameId: true,
+        discord: true,
       },
       where: {
-        gameId,
-      },
-      orderBy: {
-        createdAt: 'desc',
+        id,
       },
     })
 
-    return ads
+    return ad
   }
 }

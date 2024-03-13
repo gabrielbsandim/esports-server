@@ -1,5 +1,5 @@
-import { type AdListByGameRepositoryNamespace } from '@/domain/repositories/Ad/AdListByGame'
-import { type AdListByGameUsecaseNamespace } from '@/domain/usecases/Ad/AdListByGame'
+import { type AdListByGameRepositoryNamespace } from '@/domain/repositories/Ad/AdListByGameRepository.types'
+import { type AdListByGameUsecaseNamespace } from '@/domain/usecases/Ad/AdListByGameCase.types'
 
 export const adListByGameInputMock: AdListByGameUsecaseNamespace.TRequest = {
   gameId: 'any gameId',

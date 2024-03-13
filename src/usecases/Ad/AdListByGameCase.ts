@@ -1,10 +1,10 @@
 import {
   type AdListByGameUsecaseNamespace,
   type IAdListByGameUsecase,
-} from '@/domain/usecases/Ad/AdListByGame'
+} from '@/domain/usecases/Ad/AdListByGameCase.types'
 import { inject, injectable } from '@/infra/di'
 import { TYPES } from '@/infra/di/types'
-import { type AdListByGameRepository } from '@/infra/repositories/Ad/AdListByGame'
+import { type AdListByGameRepository } from '@/infra/repositories/Ad/AdListByGameRepository'
 import { convertMinutesToHourString } from '@/utils/ConvertHoursAndMinutes'
 
 @injectable()

@@ -1,8 +1,8 @@
-import { type IAdBusinessData } from '@/domain/entities/Ad'
-import { type AdCreateUsecaseNamespace, type IAdCreateUsecase } from '@/domain/usecases/Ad/AdCreate'
+import { type IAdBusinessData } from '@/domain/entities/AdEntity.types'
+import { type AdCreateUsecaseNamespace, type IAdCreateUsecase } from '@/domain/usecases/Ad/AdCreateCase.types'
 import { inject, injectable } from '@/infra/di'
 import { TYPES } from '@/infra/di/types'
-import { type AdCreateRepository } from '@/infra/repositories/Ad/AdCreate'
+import { type AdCreateRepository } from '@/infra/repositories/Ad/AdCreateRepository'
 import { convertHourStringToMinutes, convertMinutesToHourString } from '@/utils/ConvertHoursAndMinutes'
 
 @injectable()

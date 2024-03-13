@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import { type GameListUsecaseNamespace } from '@/domain/usecases/Game/GameList'
+import { type GameListUsecaseNamespace } from '@/domain/usecases/Game/GameListCase.types'
 
 export const gameListCaseMock: GameListUsecaseNamespace.TResponse = [
   {
