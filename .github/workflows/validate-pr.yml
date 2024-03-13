@@ -6,7 +6,7 @@ on:
 
 env:
   BRANCH: ${{ github.ref }}
-  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+  DATABASE_URL: ${{ secrets.development.DATABASE_URL }}
   PORT: ${{ secrets.PORT }}
   ENV_NAME: ${{ secrets.ENV_NAME }}
 
@@ -39,5 +39,8 @@ jobs:
       - name: "Set up environment"
         run: docker compose -f docker-compose-test.yml up -d --wait
 
+      - name: Wait docker run
+        run: sleep 30
+
       - name: "Test server"
-        run: docker exec -it app_database_test yarn test 
+        run: docker exec app_database_test yarn test

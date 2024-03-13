@@ -3,6 +3,9 @@ import type { Config } from '@jest/types'
 
 const config: Config.InitialOptions = {
   clearMocks: true,
+  testEnvironment: 'node',
+  globalSetup: './jest.global-setup.ts',
+  globalTeardown: './jest.global-teardown.ts',
   rootDir: '.',
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',

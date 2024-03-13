@@ -1,4 +1,4 @@
-import { type IBaseEntity } from '@/domain/entities/Base'
+import { type IBaseEntity } from '@/domain/entities/BaseEntity.types'
 
 export interface IAd {
   readonly id: string

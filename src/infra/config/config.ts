@@ -3,5 +3,5 @@ import { getConfig } from '@/infra/config/config.util'
 
 export const config: IConfig = {
   ENV_NAME: getConfig<TEnvironment>('ENV_NAME'),
-  PORT: +getConfig('PORT'),
+  SERVER_PORT: +getConfig('SERVER_PORT'),
 }

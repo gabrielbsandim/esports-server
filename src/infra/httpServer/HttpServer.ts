@@ -28,8 +28,8 @@ export class HttpServer implements IHTTPServer {
   async start() {
     this.register()
 
-    this.httpServer.listen(config.PORT)
+    this.httpServer.listen(config.SERVER_PORT)
 
-    console.log(`listening on port: ${config.PORT}`)
+    console.log(`listening on port: ${config.SERVER_PORT} - ${config.ENV_NAME}`)
   }
 }

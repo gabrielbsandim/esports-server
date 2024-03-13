@@ -5,7 +5,7 @@ import {
   discordFindByAdCaseInput,
   discordFindByAdRepositoryOutput,
 } from '@/__fixtures__/Ad/DiscordFindByAdMock'
-import { type IDiscordFindByAdRepository } from '@/domain/repositories/Ad/DiscordFindByAd'
+import { type IDiscordFindByAdRepository } from '@/domain/repositories/Ad/DiscordFindByAdRepository.types'
 import { DiscordFindByAdUsecase } from '@/usecases/Ad/DiscordFindByAdCase'
 
 const repositoryMock = mock<IDiscordFindByAdRepository>()

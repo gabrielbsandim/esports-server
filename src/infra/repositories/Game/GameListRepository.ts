@@ -2,7 +2,7 @@
 import {
   type GameListRepositoryNamespace,
   type IGameListRepository,
-} from '@/domain/repositories/Game/GameList'
+} from '@/domain/repositories/Game/GameListRepository.types'
 import { type Database } from '@/infra/database/db'
 import { inject, injectable } from '@/infra/di'
 import { TYPES } from '@/infra/di/types'

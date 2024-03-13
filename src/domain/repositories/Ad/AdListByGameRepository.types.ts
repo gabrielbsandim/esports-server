@@ -1,5 +1,5 @@
-import { type IBaseHandler } from '@/domain/application/BaseHandler'
-import { type IAd } from '@/domain/entities/Ad'
+import { type IBaseHandler } from '@/domain/application/BaseHandler.types'
+import { type IAd } from '@/domain/entities/AdEntity.types'
 import { type IDbRepository } from '@/domain/repositories/Repository.types'
 
 export interface IAdListByGameRepository

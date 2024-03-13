@@ -1,4 +1,4 @@
-import { type IConfig } from './config.types'
+import { type IConfig } from '@/infra/config/config.types'
 
 export function getConfig<T extends string>(configName: keyof IConfig): T {
   const config = process.env[configName]

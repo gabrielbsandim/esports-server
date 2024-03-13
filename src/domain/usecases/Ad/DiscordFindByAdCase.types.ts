@@ -1,5 +1,5 @@
-import { type IBaseHandler } from '@/domain/application/BaseHandler'
-import { type IAd } from '@/domain/entities/Ad'
+import { type IBaseHandler } from '@/domain/application/BaseHandler.types'
+import { type IAd } from '@/domain/entities/AdEntity.types'
 
 export interface IDiscordFindByAdUsecase
   extends IBaseHandler<DiscordFindByAdUsecaseNamespace.TResponse, DiscordFindByAdUsecaseNamespace.TRequest> {}

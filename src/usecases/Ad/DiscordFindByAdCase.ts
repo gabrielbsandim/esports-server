@@ -1,10 +1,10 @@
 import {
   type DiscordFindByAdUsecaseNamespace,
   type IDiscordFindByAdUsecase,
-} from '@/domain/usecases/Ad/DiscordFindByAd'
+} from '@/domain/usecases/Ad/DiscordFindByAdCase.types'
 import { inject, injectable } from '@/infra/di'
 import { TYPES } from '@/infra/di/types'
-import { type DiscordFindByAdRepository } from '@/infra/repositories/Ad/DiscordFindByAd'
+import { type DiscordFindByAdRepository } from '@/infra/repositories/Ad/DiscordFindByAdRepository'
 
 @injectable()
 export class DiscordFindByAdUsecase implements IDiscordFindByAdUsecase {
